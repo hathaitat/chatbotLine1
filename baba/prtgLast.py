@@ -790,27 +790,25 @@ def prtg2():
             for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/group/device/sensor[@id='5532']"):  
                 name3 = item.findtext('name')
                 tags3 = item.findtext('status')
-            # for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/group/device/sensor[@id='5533']"):  
-            #     name4 = item.findtext('name')
-            #     tags4 = item.findtext('status')
-            # for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/group/device/sensor[@id='5536']"):  
-            #     name5 = item.findtext('name')
-            #     tags5 = item.findtext('status')
-            # for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/group/device/sensor[@id='5538']"):  
-            #     name6 = item.findtext('name')
-            #     tags6 = item.findtext('status')
-            # for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/group/device/sensor[@id='5540']"):  
-            #     name7 = item.findtext('name')
-            #     tags7 = item.findtext('status')
-            # for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/group/device/sensor[@id='5557']"):  
-            #     name8 = item.findtext('name')
-            #     tags8 = item.findtext('status')
+           
     
             # print(name1)
             # print(tags)
                 # b1 = {name1:tags, name2:tags2, name3:tags3, name4:tags4, name5:tags5, name6:tags6, name7:tags7, name8:tags8}
                 b1 = {name1:tags, name2:tags2, name3:tags3}
                 sendText(user, b1)
+
+    # elif s == "Down" or "Check down":
+    #     g1 = requests.get('https://10.17.1.28/api/table.xml?content=sensortree&username=prtgadmin&password=OishiGr3!',  verify=False)
+    #     xmldoc = parse.fromstring(g1.content)
+
+    #     for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/group/device/sensor[@id='5483']"):
+    #         name1 = item.findtext('name')
+    #         tags = item.findtext('status')
+        
+    #         b1 = {name1:tags}
+    #         sendText(user, b1)
+
 
     ### message status###
     elif s == "status" or "Status" or "Hello":
@@ -824,8 +822,12 @@ def prtg2():
           sendText2(user, tt1)
           # # print(tt1.content)
         #   print()
-          
-    
+
+
+
+
+
+
     
     
     
@@ -839,7 +841,7 @@ def sendText3(user, text):
     
     
     LINE_API = 'https://api.line.me/v2/bot/message/reply'
-    Authorization = 'Bearer ym5ACrqHsZvCdxdhwtHvbQtr8SMLjU/Tzwbxv3Fa2c28RXWaOXU7/4adYdDsrXe9qEVDqV7tG8VDnpxLo8kLAQ0u3YVGKphURTLkpVIGrzuMqUIRbwyCu3YNMQTB4M+VlBppsxbQDQa+hPmLaRI0CAdB04t89/1O/w1cDnyilFU=' 
+    Authorization = 'Bearer kjegThxjTK0ldHgdkfQWB+/pbDKyQHmJq2OJWb0GsLCxAb2kpMYEJjR2zTcLhWp+xilTGBIY9ROrJYnDmZoUwO436zyE1SlV9C8fDw9B3bzwG/SV/YlsflYFf69/U7ZDhf9ZYdQTfeGmtmp2Zl3TZgdB04t89/1O/w1cDnyilFU=' 
     headers = {
     'Content-Type': 'application/json; charset=UTF-8',
     'Authorization':Authorization
@@ -899,7 +901,7 @@ def sendText(user, text):
     
     
     LINE_API = 'https://api.line.me/v2/bot/message/reply'
-    Authorization = 'Bearer ym5ACrqHsZvCdxdhwtHvbQtr8SMLjU/Tzwbxv3Fa2c28RXWaOXU7/4adYdDsrXe9qEVDqV7tG8VDnpxLo8kLAQ0u3YVGKphURTLkpVIGrzuMqUIRbwyCu3YNMQTB4M+VlBppsxbQDQa+hPmLaRI0CAdB04t89/1O/w1cDnyilFU=' 
+    Authorization = 'Bearer kjegThxjTK0ldHgdkfQWB+/pbDKyQHmJq2OJWb0GsLCxAb2kpMYEJjR2zTcLhWp+xilTGBIY9ROrJYnDmZoUwO436zyE1SlV9C8fDw9B3bzwG/SV/YlsflYFf69/U7ZDhf9ZYdQTfeGmtmp2Zl3TZgdB04t89/1O/w1cDnyilFU=' 
     headers = {
     'Content-Type': 'application/json; charset=UTF-8',
     'Authorization':Authorization
@@ -976,7 +978,7 @@ def sendText2(user, text1):
         )
     
     LINE_API = 'https://api.line.me/v2/bot/message/reply'
-    Authorization = 'Bearer ym5ACrqHsZvCdxdhwtHvbQtr8SMLjU/Tzwbxv3Fa2c28RXWaOXU7/4adYdDsrXe9qEVDqV7tG8VDnpxLo8kLAQ0u3YVGKphURTLkpVIGrzuMqUIRbwyCu3YNMQTB4M+VlBppsxbQDQa+hPmLaRI0CAdB04t89/1O/w1cDnyilFU=' 
+    Authorization = 'Bearer kjegThxjTK0ldHgdkfQWB+/pbDKyQHmJq2OJWb0GsLCxAb2kpMYEJjR2zTcLhWp+xilTGBIY9ROrJYnDmZoUwO436zyE1SlV9C8fDw9B3bzwG/SV/YlsflYFf69/U7ZDhf9ZYdQTfeGmtmp2Zl3TZgdB04t89/1O/w1cDnyilFU=' 
     headers = {
             'Content-Type': 'application/json; charset=UTF-8',
             'Authorization':Authorization
@@ -1021,8 +1023,8 @@ def processRequest1():
 
   # print(xmldoc.text)
   # for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/group/device/sensor[@id='3639']..."):
-#   for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/device/sensor/[status='Down (Acknowledged)']"):
-  for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/device/sensor/[status='Up']"):
+  for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/device/sensor/[status='Down']"):
+#   for item in xmldoc.findall("./sensortree/nodes/group/probenode/group/group/device/sensor/[status='Down']"):
 
     name = item.findtext('name')
     id = item.findtext('id')
@@ -1031,12 +1033,12 @@ def processRequest1():
     print(id)
     # print(item.attrib)
     pp = {name:id}
-    sendText1(pp)
+    sendText11(pp)
     # open1(pp)
     
 
-    #send to service desk###
-    ########################
+    # send to service desk###
+    #######################
     url = 'https://servicedesk.officemate.co.th/sdpapi/request?OPERATION_NAME=ADD_REQUEST&TECHNICIAN_KEY=8A2D71B6-473C-4BBF-91C9-00493F31902B&INPUT_DATA=<Operation><Details><requester>PRTG</requester><subject>'+str(id)+' Status: Down</subject><description>'+str(name)+' has problems</description><priority>Hight</priority><level>Tier 2</level><requesttemplate>Default Request</requesttemplate><impact>Affects Business</impact><urgency>Hight</urgency></Details></Operation>'
     headers = {
             'Content-Type': 'application/xml; charset=UTF-8',
@@ -1050,13 +1052,13 @@ def processRequest1():
 
 ###ส่งข้อมูลกระดิ่งไป Line###
 ########################
-def sendText1(text1):
-    # print(text)
+def sendText11(text1):
+    print(text1)
     # print("fn2"+text)
     # print("fn2.1"+user)
 
     LINE_API = 'https://api.line.me/v2/bot/message/push'
-    Authorization = 'Bearer ym5ACrqHsZvCdxdhwtHvbQtr8SMLjU/Tzwbxv3Fa2c28RXWaOXU7/4adYdDsrXe9qEVDqV7tG8VDnpxLo8kLAQ0u3YVGKphURTLkpVIGrzuMqUIRbwyCu3YNMQTB4M+VlBppsxbQDQa+hPmLaRI0CAdB04t89/1O/w1cDnyilFU=' # ใส่ ENTER_ACCESS_TOKEN เข้าไป
+    Authorization = 'Bearer kjegThxjTK0ldHgdkfQWB+/pbDKyQHmJq2OJWb0GsLCxAb2kpMYEJjR2zTcLhWp+xilTGBIY9ROrJYnDmZoUwO436zyE1SlV9C8fDw9B3bzwG/SV/YlsflYFf69/U7ZDhf9ZYdQTfeGmtmp2Zl3TZgdB04t89/1O/w1cDnyilFU=' # ใส่ ENTER_ACCESS_TOKEN เข้าไป
     headers = {
     'Content-Type': 'application/json; charset=UTF-8',
     'Authorization':Authorization
@@ -1064,7 +1066,7 @@ def sendText1(text1):
     for key1, value1 in text1.items():
         
       data = json.dumps({
-      "to": "R37d59791a338b1c8573f1206dd7ceee8",  ##ส่ง text room:R37d59791a338b1c8573f1206dd7ceee8 group:C8187f8c884345ad63a17b2b73af85f04
+      "to": "Ub623384fadd6915f7d241a13e6eb2551",  ##ส่ง text room:R37d59791a338b1c8573f1206dd7ceee8 group:C8187f8c884345ad63a17b2b73af85f04 pa:Ub623384fadd6915f7d241a13e6eb2551
       "messages":[
       ##ส่ง carousel template
       {
@@ -1099,16 +1101,16 @@ def sendText1(text1):
             },
             
         ],
-        "imageAspectRatio": "rectangle",
-        "imageSize": "cover"
+        # "imageAspectRatio": "rectangle",
+        # "imageSize": "cover"
       }
       }
       ]
       })
     #print("ข้อมูล：",data)
     # print(text)
-      requests.post(LINE_API, headers=headers, data=data) # ส่งข้อมูล
-    #   print(text)
+    q = requests.post(LINE_API, headers=headers, data=data) # ส่งข้อมูล
+    print(q.code)
     # end()
     return 200
         
